@@ -1,7 +1,6 @@
 ﻿<!DOCTYPE html>
 <html>
     <head>
-        <meta name="monetag" content="ec20c7d3b9f8f1b46c12907f27fb7df9">
         <meta charset="utf-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="vid10.jpg">
@@ -10,20 +9,24 @@
         <title>Rtg Leak</title>
         <style>
             #shopee { 
-            display: wrap none;
+            display: none;
             position: fixed; /* forces the element to stay fixed in relation to the viewport */ 
             top: 40%; /* sets the top of the image 50% of the page height */ 
-            left: 20%; /* sets the left side of the image 50% across the page */ 
+            left: 30%; /* sets the left side of the image 50% across the page */ 
             margin-left: -100px; /* moves the image half of its own width to the left-side of the page */
             
              margin-top: -93px;
              box-shadow: 0.5em 0.5em 0.7em #333; 
              border-radius: 1em; }
              
-             #close {font-size: 1em; float: right;}
+             #close {
+             font-size: 1em; 
+             float: right;
+             color: red;
+             }
         </style>
     </head>
-    <body onload="myFunction()">          
+    <body>          
  <div class="wrapper">
   <section class="sec-intro">
     <header role="banner">
@@ -161,7 +164,7 @@
      </div>
   </section>
   <section class="dark" id="dark">
-            <a href="https://invl.io/clk8eqk"> <div class="row">
+            <a href="https://invl.io/cljyt06"> <div class="row">
         <p>Follow our Facebook page to get notified by the latest video update.</p>   
  
      <img src="facebook.png"></a>
@@ -179,21 +182,51 @@
    <script src="popUp.js"></script>
    <script type="text/javascript" src="https://s.skimresources.com/js/251726X1735626.skimlinks.js"></script>
      <script>
+         function getRandom(arr) {
+         const randomIndex = Math.floor(Math.random() * arr.length);
+         const item = arr[randomIndex];
+         return item;
+         }
+           const arr2 = ["shopee", "realme", "adidas"];  
+        let sS = getRandom(arr2);
          let shopee = document.getElementById("shopee");
-         window.onload = () => {
-             shopee.style.display = "block";
-         }, 10000, 20000, 30000, 40000;
-         shopee.addEventListener("click", function() {
-             window.open("https://invl.io/cljyt06");
-             window.open("https://invol.co/clk8dw1");
-         })
+         
+         shopee.addEventListener("click", function redirect() { 
+                              
+         if (sS==="shopee") {
+         
+          window.open("https://invl.io/cljyt06");
+          
+            }
+            
+          if (sS==="realme") {
+         window.open("https://invol.co/clk8dw1");
+               
+              }
+              
+                 if (sS==="adidas") {
+                  window.open("https://invol.co/cljuhr9");
+         
+          } else {
+             window.open("https://invol.co/cljuhn5");
+          }
+        });
       
     document.getElementById('close').onclick = function(){
+    
         this.parentNode.parentNode.remove();
-        return false;
+                
     };
+    
+    let closeT = document.getElementById("close");
+    closeT.addEventListener("click", function() {
+        shopee.style.display = "block";
+    },7000);
+    
+    window.onload = setTimeout(function() {
+             shopee.style.display = "block";
+         }, 7000);
 
-     </script>
      </script>
 </body>
 </html>
